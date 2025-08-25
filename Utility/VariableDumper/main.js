@@ -48,4 +48,4 @@ function dump(obj, maxDepth = 3) {
 }
 
 window.vardump = dump;
-console.log("Variable dumper loaded!\nUsage:\nvardump('variable');"
+console.log("Variable dumper loaded!\nUsage:\nvardump('variable');");
