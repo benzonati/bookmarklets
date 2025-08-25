@@ -7,7 +7,7 @@ Use the `dump` function on any webpage without modifying the page source.
 ## Quick Copy Bookmarklet
 ```javascript
 javascript:(async()=>{
-     const code = await fetch('https://github.com/benzonati/bookmarklets/raw/refs/heads/main/Utility/VariableDumper/main.js').then(r=>r.text());
+     const code = await fetch('https://raw.githubusercontent.com/benzonati/bookmarklets/refs/heads/main/Utility/VariableDumper/main.js').then(r=>r.text());
      eval(code);
  })();
 ```
