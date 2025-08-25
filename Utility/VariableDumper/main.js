@@ -10,7 +10,7 @@ function dumpVariable(obj, maxDepth = 3, currentDepth = 0, path = '') {
 
   try {
     for (const key in obj) {
-      if (obj.hasOwnProperty(key)) {
+      if (obj.hasOwnProperty(key) && key !== 'vardump') {
         try {
           const value = obj[key];
           const fullPath = path ? `${path}.${key}` : key;
@@ -42,7 +42,10 @@ function dumpVariable(obj, maxDepth = 3, currentDepth = 0, path = '') {
   return result;
 }
 
-export function dump(obj, maxDepth = 3) {
+function dump(obj, maxDepth = 3) {
   console.log(`Dumping variable: ${obj?.constructor?.name || typeof obj}`);
   console.log(dumpVariable(obj, maxDepth));
 }
+
+window.vardump = dump;
+console.log("Variable dumper loaded!\nUsage:\nvardump('variable');"
