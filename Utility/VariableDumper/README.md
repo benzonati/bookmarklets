@@ -13,9 +13,8 @@ javascript:(async()=>{
 ```
 ## Then run the following in console
 ```javascript
-dump(window);
+vardump(window);
 ```
-
 
 ---
 
@@ -29,5 +28,5 @@ dump(window);
 ### Example
 To dump `document` instead of `window`:
 ```javascript
-dump(document);
+vardump(document);
 ````
